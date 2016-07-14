@@ -14,9 +14,17 @@ class Board
     length.times do |x|
       row = []
       width.times do |y|
-        row << Cell.new(x,y)
+        cell = Cell.new(x,y)
+        assign_neighbors(cell)
+        row << cell
       end
       board << row
     end
+  end
+
+  def assign_neighbors(cell)
+    cell.neighbors = []
+    possible 
+    cell.neighbors << 
   end
 end
