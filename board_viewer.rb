@@ -4,7 +4,7 @@ module GameViewer
   def self.show(game)
     game.board.each do |cell|
       CellViewer.show(cell)
-      if cell.y == game.width-1
+      if cell.x == game.width-1
         print "\n"
       end
     end
