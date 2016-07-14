@@ -1,5 +1,6 @@
 require_relative "board"
+require_relative "board_viewer"
 
 game = Board.new
 
-p game
+BoardViewer.show(game)
