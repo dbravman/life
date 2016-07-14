@@ -12,19 +12,9 @@ class Board
 
   def initialize_cells
     length.times do |x|
-      row = []
       width.times do |y|
-        cell = Cell.new(x,y)
-        assign_neighbors(cell)
-        row << cell
+        board << Cell.new(x,y)
       end
-      board << row
     end
-  end
-
-  def assign_neighbors(cell)
-    cell.neighbors = []
-    possible 
-    cell.neighbors << 
   end
 end

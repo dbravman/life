@@ -1,12 +1,12 @@
 require_relative "cell_viewer"
 
 module BoardViewer
-  def self.show(board)
-    board.each do |row|
-      row.each do |cell|
-        CellViewer.show(cell)
+  def self.show(game)
+    game.board.each do |cell|
+      CellViewer.show(cell)
+      if cell.y == game.width-1
+        print "\n"
       end
-      print "\n"
     end
   end 
 end
