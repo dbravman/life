@@ -1,6 +1,6 @@
 require_relative "cell_viewer"
 
-module BoardViewer
+module GameViewer
   def self.show(game)
     game.board.each do |cell|
       CellViewer.show(cell)
