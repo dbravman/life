@@ -5,6 +5,7 @@ game = Board.new
 
 GameViewer.show(game)
 
-50.times
-  game.tick
-end
+# 50.times do
+#   game.tick
+#   GameViewer.show(game)
+# end

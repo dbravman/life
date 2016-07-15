@@ -15,7 +15,10 @@ class Board
     count = 0
     width.times do |y|
       length.times do |x|
-        board << Cell.new(x,y,count)
+        if seed
+          life = [true, false].sample
+        end
+        board << Cell.new(x,y,count,life)
         count += 1
       end
     end

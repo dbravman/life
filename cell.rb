@@ -1,9 +1,11 @@
 class Cell
-  attr_accessor :x, :y, :index, :alive, :neighbors
-  def initialize(x,y,index)
+  attr_accessor :x, :y, :index, :alive, :neighbors, :count
+  
+  def initialize(x,y,index,life)
     @x = x
     @y = y
     @index = index
+    @life = life
     @alive = false
   end
 
