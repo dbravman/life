@@ -5,8 +5,7 @@ class Cell
     @x = x
     @y = y
     @index = index
-    @life = life
-    @alive = false
+    @alive = life
   end
 
   def count_alive_neighbors

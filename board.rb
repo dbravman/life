@@ -63,8 +63,6 @@ class Board
   end
 
   def tick
-    new_board = []
-
     board.each do |cell|
       cell.count_alive_neighbors
     end
