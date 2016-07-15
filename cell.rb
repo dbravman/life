@@ -6,4 +6,8 @@ class Cell
     @index = index
     @alive = false
   end
+
+  def count_alive_neighbors
+    @count = neighbors.count {|neighbor| neighbor.alive}
+  end
 end

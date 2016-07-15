@@ -11,7 +11,7 @@ class Board
     board.each { |cell| initialize_neighbors(cell) }
   end
 
-  def initialize_cells
+  def initialize_cells(seed=true)
     count = 0
     width.times do |y|
       length.times do |x|
@@ -57,5 +57,21 @@ class Board
     end
 
     cell.neighbors = neighbors
+  end
+
+  def tick
+    new_board = []
+
+    board.each do |cell|
+      cell.count_alive_neighbors
+    end
+
+    board.each do |cell|
+      if !cell.alive && cell.count == 3
+        cell.alive = true
+      elsif cell.alive && (cell.count < 2 || cell.count > 3)
+        cell.alive = false
+      end
+    end
   end
 end
